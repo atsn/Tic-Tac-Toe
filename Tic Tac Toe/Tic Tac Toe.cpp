@@ -18,16 +18,16 @@ const char NO_ONE = 'N';
 
 //function prototypes
 void instructions();
-char askYesNo(string question);
-int askNumber(string question, int high, int low = 0);
-char humanPiece();
-char opponent(char piece);
-void displayBoard(const vector<char>& board);
-char winner(const vector<char>& board);
-bool isLegal(const vector<char>& board, int move);
-int humanMove(const vector<char>& board, char human);
-int computerMove(vector<char> board, char computer);
-void announceWinner(char winner, char computer, char human);
+//char askYesNo(string question);
+//int askNumber(string question, int high, int low = 0);
+//char humanPiece();
+//char opponent(char piece);
+//void displayBoard(const vector<char>& board);
+//char winner(const vector<char>& board);
+//bool isLegal(const vector<char>& board, int move);
+//int humanMove(const vector<char>& board, char human);
+//int computerMove(vector<char> board, char computer);
+//void announceWinner(char winner, char computer, char human);
 
 // main function
 int main()
@@ -37,7 +37,7 @@ int main()
     vector<char> board(NUM_SQUARES, EMPTY);
     
     instructions();
-    char human = humanPiece();
+    /*char human = humanPiece();
     char computer = opponent(human);
     char turn = X;
     displayBoard(board);
@@ -59,6 +59,12 @@ int main()
     }
     
     announceWinner(winner(board), computer, human);
-   
+   */
     return 0;
+}
+
+
+void instructions()
+{
+	cout << "Welcome to the ultimate man-machine showdown: Tic-Tac-Toe.\n--where human brain is pit against silicon processor\n\nMake your move known by entering a number, 0-8. The number corresponts to the desired bord position, as illustrated: \n\n\t0 | 1 | 2\n\t---------\n\n\t3 | 4 | 5\n\t---------\n\n\t6 | 7 | 8\n\nPrepare yourself, human. The battle is about to begin.";
 }
